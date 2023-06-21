@@ -13,3 +13,5 @@ In this course we'll learn the basic concepts of the Development of systems usin
 5. [Spring Boot Intro](springBoot.md)
 6. [Microservices Architecture](microservices.md)
 7. [Security](security.md)
+
+[Next](goodPractices.md)
