@@ -25,6 +25,7 @@
   - Entity
 
   ![project-structure](image.png)
+
   Each package have their own responsability in the application and allows us to have a better and cleaner organization of our project.
 
   The Controller is in charge of all the functionality with the direct interaction with the users. Inside this package are all the classes that have this role.
@@ -44,11 +45,14 @@
   In OOP we use inheritance to create higher level classes which we can extend in subclasses to model an specific behaviour.
 
   In our current project we do something similar with the use of the interface `JpaRepository` in our `LicenciaturaRepository.java`. This interface already has several methods implemented like: `save()`, `findAll()`, `saveAll()`, etc. So that we don't need to write or modify that code but we might need to find a specific field like the revoe we can implement it without touching the methods already implemented.
+
   ![open-closed example](image-1.png)
 
 - **L**iskov Substitution Principle
 
   > **_Design your classes so that the client dependencies can be substituted with subclasses without the client knowing about the change._**
+
+  We can see this principle implemented in Spring Boot with the use `@Component`, `@Service`, `@Repository`, etc. annotations. This annotations mark the role that the class fulfils. With this we have that `@Component` is a generic stereotype for any Spring-managed component. `@Repository`, `@Service` and many others are specializations of `@Component` for more specific use cases. Therefore, you can annotate your component classes with `@Component`, but, by annotating them with `@Repository`, or `@Service` instead, your classes are more properly suited for processing by tools but doesn't change the functionality of the class.
 
 - **I**nterface Segregation Principle
 
